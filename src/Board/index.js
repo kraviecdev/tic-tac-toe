@@ -14,14 +14,14 @@ const Board = () => {
                 {renderSquare(2)}
             </StyledRow>
             <StyledRow>
-                {renderSquare(9)}
-                {renderSquare(9)}
-                {renderSquare(9)}
+                {renderSquare(3)}
+                {renderSquare(4)}
+                {renderSquare(5)}
             </StyledRow>
             <StyledRow>
-                {renderSquare(9)}
-                {renderSquare(9)}
-                {renderSquare(9)}
+                {renderSquare(6)}
+                {renderSquare(7)}
+                {renderSquare(8)}
             </StyledRow>
         </StyledBoard>
     );
