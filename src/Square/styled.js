@@ -3,19 +3,14 @@ import styled from 'styled-components';
 export const StyledSquare = styled.button`
     background: #fff;
     border: 1px solid #999;
-    float: left;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
-    padding: 0;
+    padding: 5px;
+    min-width: 164px;
+    min-height: 164px;
     text-align: center;
-    width: 34px;
+    font-weight: bold;
+    font-size: 130px;
 
     &:focus{
-        outline: none;
         background: #ddd;
     }
 `
