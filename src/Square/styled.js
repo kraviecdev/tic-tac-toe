@@ -9,8 +9,13 @@ export const StyledSquare = styled.button`
     text-align: center;
     font-weight: bold;
     font-size: 130px;
+    transition: 1s;
 
     &:focus{
+        background: #ddd;
+    }
+    &:hover{
+        transform: scale(1.04);
         background: #ddd;
     }
 `
