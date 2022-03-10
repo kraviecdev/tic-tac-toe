@@ -1,16 +1,16 @@
-import { useState } from "react";
 import { StyledSquare } from "./styled";
 
 
-const Square = () => {
-    
-    const [value, setValue] = useState("");
-
+const Square = ({ value, onClick, disabled }) => {
 
     return (
-        <StyledSquare onClick={() => setValue(value === "X" ? "" : "X")}>
+        <StyledSquare
+            onClick={onClick}
+            disabled={disabled}
+        >
             {value}
         </StyledSquare>
+
     );
 }
 export default Square;
