@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Square from "../Square";
+import { Patterns } from "./patterns";
 import { StyledBoard, StyledRow } from "./styled";
 
 const Board = () => {
@@ -23,17 +24,20 @@ const Board = () => {
         }
     };
 
-    // const disableButton = (i) => {
-    //     if (boardStatus[i] === "X" || "O") {
-    //         return true;
-    //     }
-    // }
+    const calculateWinner = () => {
+        for (let i = 0; i < Patterns.length; i++) {
+            const [a, b, c] = Patterns[i];
+            if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
+                return console.log(boardStatus[a]);
+            }
+        }
+        return null;
+    }
 
     return (
         <StyledBoard>
             <StyledRow>
                 <Square
-                    // disabled={disableButton()}
                     onClick={() => chooseSquare(0)}
                     value={boardStatus[0]}
                 />
