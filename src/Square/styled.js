@@ -14,8 +14,13 @@ export const StyledSquare = styled.button`
     &:focus{
         background: #ddd;
     }
+
     &:hover{
         transform: scale(1.04);
         background: #ddd;
     }
-`
+    &:disabled{
+        background: #ddd;
+        color: black;
+    }
+`;

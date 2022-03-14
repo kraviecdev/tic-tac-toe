@@ -1,6 +1,5 @@
 import { StyledSquare } from "./styled";
 
-
 const Square = ({ value, onClick, disabled }) => {
 
     return (
