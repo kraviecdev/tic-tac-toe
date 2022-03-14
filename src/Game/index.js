@@ -1,11 +1,16 @@
 import { StyledGame } from "./styled";
+import Header from "../Header";
 
 
-const Game = ({children}) => {
+const Game = ({ children }) => {
     return (
-        <StyledGame>
-            {children}
-        </StyledGame>
+        <>
+            <Header />
+                <StyledGame>
+                    {children}
+                </StyledGame>
+            
+        </>
     );
 }
 
