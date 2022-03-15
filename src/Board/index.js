@@ -1,5 +1,6 @@
-import { useState } from "react";
 import Square from "../Square";
+import Result from "../Result";
+import { useState } from "react";
 import { Patterns } from "./patterns";
 import { StyledBoard, StyledRow } from "./styled";
 
@@ -8,7 +9,7 @@ const Board = () => {
     const [boardStatus, setBoardStatus] = useState(Array(9).fill(null));
     const [disable, setDisable] = useState(Array(9).fill(false));
     const [player, setPlayer] = useState("X");
-
+    // const [result, setResult] = useState(null);
 
     const chooseSquare = (i) => {
         setBoardStatus(
@@ -39,13 +40,15 @@ const Board = () => {
         for (let i = 0; i < Patterns.length; i++) {
             const [a, b, c] = Patterns[i];
             if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
-                return console.log(boardStatus[a]);
+                return boardStatus[a];
             }
         }
         return null;
     }
 
+
     return (
+        <>
         <StyledBoard>
             <StyledRow>
                 <Square
@@ -99,6 +102,8 @@ const Board = () => {
                 />
             </StyledRow>
         </StyledBoard>
+        <Result />
+        </>
     );
 }
 
