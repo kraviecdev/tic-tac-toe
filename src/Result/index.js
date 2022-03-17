@@ -1,13 +1,16 @@
-import { StyledResult } from "./styled";
+import { StyledResult, StyledResultButton, StyledResultInner } from "./styled";
 
 
-const Result = ({ result }) => {
+const Result = ({ trigger, children, onClick }) => {
 
-    return (
+   return (trigger) ? (
         <StyledResult>
-            {"Wynik"}
+            <StyledResultInner>
+                <StyledResultButton onClick={onClick}>{"Continue"}</StyledResultButton>
+                {children}
+            </StyledResultInner>
         </StyledResult>
-    )
+    ) : "";
 }
 
 export default Result;
