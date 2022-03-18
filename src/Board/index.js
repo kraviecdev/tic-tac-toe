@@ -1,6 +1,6 @@
 import Square from "../Square";
 import Result from "../Result";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Patterns } from "./patterns";
 import { StyledBoard, StyledRow } from "./styled";
 
@@ -12,6 +12,7 @@ const Board = () => {
     const [result, setResult] = useState("");
 
     const chooseSquare = (i) => {
+
         setBoardStatus(
             boardStatus.map((value, id) => {
                 if (id === i && value === null) {
@@ -34,16 +35,6 @@ const Board = () => {
         } else {
             setPlayer("X")
         };
-
-        setResult(() => {
-            for (let i = 0; i < Patterns.length; i++) {
-                const [a, b, c] = Patterns[i];
-                if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
-                    return boardStatus[a];
-                }
-            }
-            return null;
-        });
     };
 
     const playAgain = () => {
@@ -51,7 +42,17 @@ const Board = () => {
         setDisable(Array(9).fill(false));
         setPlayer("X")
         setResult("")
-    }
+    };
+
+    useEffect((id) => {
+            for (id = 0; id < Patterns.length; id++) {
+                const [a, b, c] = Patterns[id];
+                if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
+                    setResult(boardStatus[a]);
+                }
+            }
+            return null;
+    });
 
     return (
         <>
