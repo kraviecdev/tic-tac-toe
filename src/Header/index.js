@@ -1,11 +1,11 @@
 import { StyledHeader, StyledTitle } from "./styled"
 
-const Header = () => {
+const Header = ({title}) => {
 
     return (
         <StyledHeader>
             <StyledTitle>
-                {"Tic Tac Toe"}
+                {title}
             </StyledTitle>
         </StyledHeader>
     );

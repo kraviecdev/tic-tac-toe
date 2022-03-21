@@ -10,7 +10,7 @@ const Board = () => {
     const [disable, setDisable] = useState(Array(9).fill(false));
     const [player, setPlayer] = useState("X");
     const [result, setResult] = useState("");
-    const [draw, setDraw] = useState("")
+    const [draw, setDraw] = useState("");
 
     const chooseSquare = (i) => {
 
@@ -131,6 +131,6 @@ const Board = () => {
             </Result>
         </>
     );
-}
+};
 
 export default Board;

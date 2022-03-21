@@ -1,17 +1,21 @@
 import styled from 'styled-components';
 
 export const StyledSquare = styled.button`
-    background: #fff;
-    border: 1px solid #999;
+    margin: 5px;
     padding: 5px;
-    min-width: 164px;
-    min-height: 164px;
     text-align: center;
+    width: 164px;
+    height: 164px;
+    font-size: 132px;
     font-weight: bold;
-    font-size: 130px;
     transition: 1s;
+    border-radius: 50px;
+    background: #3186F0;
+    box-shadow: inset 20px 20px 60px #2a72cc,
+            inset -20px -20px 60px #389aff;
 
     &:focus{
+        outline: none;
         background: #ddd;
     }
 
