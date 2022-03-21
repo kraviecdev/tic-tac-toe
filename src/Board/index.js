@@ -10,6 +10,7 @@ const Board = () => {
     const [disable, setDisable] = useState(Array(9).fill(false));
     const [player, setPlayer] = useState("X");
     const [result, setResult] = useState("");
+    const [draw, setDraw] = useState("")
 
     const chooseSquare = (i) => {
 
@@ -37,22 +38,34 @@ const Board = () => {
         };
     };
 
+    useEffect((id) => {
+        for (id = 0; id < Patterns.length; id++) {
+            const [a, b, c] = Patterns[id];
+            if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
+                setResult(boardStatus[a]);
+            }
+        }
+        return null;
+    }, [boardStatus]);
+
+    useEffect(() => {
+        const isDraw = (disable) => {
+            return disable === true;
+        };
+
+        if (disable.every(isDraw)) {
+            setDraw("Draw");
+        };
+    }, [disable]);
+
     const playAgain = () => {
         setBoardStatus(Array(9).fill(null));
         setDisable(Array(9).fill(false));
         setPlayer("X")
         setResult("")
+        setDraw("")
     };
 
-    useEffect((id) => {
-            for (id = 0; id < Patterns.length; id++) {
-                const [a, b, c] = Patterns[id];
-                if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
-                    setResult(boardStatus[a]);
-                }
-            }
-            return null;
-    });
 
     return (
         <>
@@ -112,6 +125,9 @@ const Board = () => {
             <Result trigger={result} onClick={() => playAgain()} >
                 <h1>Wielki Zwycięzca</h1>
                 <h3>{result}</h3>
+            </Result>
+            <Result trigger={draw} onClick={() => playAgain()}>
+                <h1>It is a {draw}</h1>
             </Result>
         </>
     );
