@@ -2,17 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import background from "./tic-tac-toe-bg-dark.png";
 
 export const GlobalStyle = createGlobalStyle`
-    html {
-        background-color: black;
-    }
     #root {
-        height: 98vh;
+        height: 100vh;
         box-sizing: border-box;  
-        color: #424656;
+        color: #ffffff;
         background: url("${background}");
-        background-repeat: no-repeat;
         background-size: contain;
         background-position: top;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     *, ::after, ::before {
@@ -20,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        margin: 0;
         font-family: 'Lato', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
