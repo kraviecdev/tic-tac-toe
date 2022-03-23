@@ -1,30 +1,27 @@
 import styled from 'styled-components';
 
 export const StyledSquare = styled.button`
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-    width: 164px;
-    height: 164px;
+    margin: 3px;
+    width: 224px;
+    height: 224px;
     font-size: 132px;
     font-weight: bold;
+    color: #ffffff;
     transition: 1s;
-    border-radius: 50px;
-    background: #3186F0;
-    box-shadow: inset 20px 20px 60px #2a72cc,
-            inset -20px -20px 60px #389aff;
+    border-radius: 15px;
+    background: #606060;
+    box-shadow:  1px 1px 10px #414141,
+                -1px -1px 10px #7f7f7f;   
 
-    &:focus{
+    &:focus, :hover{
         outline: none;
-        background: #ddd;
+        box-shadow: none;
     }
 
-    &:hover{
-        transform: scale(1.04);
-        background: #ddd;
-    }
     &:disabled{
-        background: #ddd;
-        color: black;
+        background: #606060;
+        box-shadow: inset 5px 5px 10px #414141,
+                    inset -5px -5px 10px #7f7f7f;
+        color: #ffffff;
     }
 `;
