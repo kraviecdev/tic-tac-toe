@@ -1,13 +1,16 @@
-import { StyledResult, StyledResultButton, StyledResultInner } from "./styled";
+import { StyledResult, StyledResultButton, StyledResultInner, StyledResultTitle } from "./styled";
 
 
-const Result = ({ trigger, children, onClick }) => {
+const Result = ({ trigger, children, onClick, title, attribute }) => {
 
-   return (trigger) ? (
+    return (trigger) ? (
         <StyledResult>
             <StyledResultInner>
-                <StyledResultButton onClick={onClick}>{"Continue"}</StyledResultButton>
-                {children}
+                <StyledResultTitle attribute={attribute}>
+                    {title}
+                    {children}
+                </StyledResultTitle>
+                <StyledResultButton onClick={onClick}>{"play again"}</StyledResultButton>
             </StyledResultInner>
         </StyledResult>
     ) : "";

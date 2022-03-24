@@ -122,12 +122,19 @@ const Board = () => {
                     />
                 </StyledRow>
             </StyledBoard>
-            <Result trigger={result} onClick={() => playAgain()} >
-                <h1>Wielki Zwycięzca</h1>
-                <h3>{result}</h3>
+            <Result
+                trigger={result}
+                onClick={() => playAgain()}
+                title={"The winner: "}
+            >
+                {result}
             </Result>
-            <Result trigger={draw} onClick={() => playAgain()}>
-                <h1>It is a {draw}</h1>
+            <Result
+                trigger={draw}
+                onClick={() => playAgain()}
+                title={"It is a "}
+            >
+                {draw}
             </Result>
         </>
     );

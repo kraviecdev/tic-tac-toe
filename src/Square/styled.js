@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const StyledSquare = styled.button`
-    margin: 3px;
-    width: 224px;
-    height: 224px;
+    cursor: pointer;
+    width: 33%;
+    height: fill;
+    margin: 0 5px;
     font-size: 132px;
     font-weight: bold;
-    color: #ffffff;
     transition: 1s;
     border-radius: 15px;
-    background: #606060;
-    box-shadow:  1px 1px 10px #414141,
-                -1px -1px 10px #7f7f7f;   
+    background: ${({theme}) => theme.colors.buttonBackgorund};
+    box-shadow:  1px 1px 10px ${({theme}) => theme.colors.shadowOne},
+                -1px -1px 10px ${({theme}) => theme.colors.shadowTwo};   
 
     &:focus, :hover{
         outline: none;
@@ -19,9 +19,8 @@ export const StyledSquare = styled.button`
     }
 
     &:disabled{
-        background: #606060;
-        box-shadow: inset 5px 5px 10px #414141,
-                    inset -5px -5px 10px #7f7f7f;
-        color: #ffffff;
+        box-shadow: inset 5px 5px 10px ${({theme}) => theme.colors.shadowOne},
+                    inset -5px -5px 10px ${({theme}) => theme.colors.shadowTwo};
+        color: ${({theme}) => theme.colors.fontColor};
     }
 `;
