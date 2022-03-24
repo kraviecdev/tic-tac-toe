@@ -1,14 +1,15 @@
 import { createGlobalStyle } from "styled-components";
-import background from "./tic-tac-toe-bg-dark.png";
+import background from "./tic-tac-toe-bg.png";
 
 export const GlobalStyle = createGlobalStyle`
-    #root {
+    #game {
+        background: ${({theme}) => theme.colors.background};
         height: 100vh;
         box-sizing: border-box;  
         color: #ffffff;
-        background: url("${background}");
+        background-image: url("${background}");
         background-size: contain;
-        background-position: top;
+        background-position: center;
         display: flex;
         justify-content: center;
         align-items: center;
