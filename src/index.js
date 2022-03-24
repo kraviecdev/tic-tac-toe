@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Board from "./Board";
-import { GlobalStyle } from "./GlobalStyle";
+import Game from "./game";
+
 
 ReactDOM.render(
     <React.StrictMode>
-        <GlobalStyle />
-        <Board />
+        <Game />
     </React.StrictMode>,
-    document.getElementById('root')
+    document.getElementById('game')
 );
