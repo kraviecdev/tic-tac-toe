@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         background: ${({theme}) => theme.colors.background};
         height: 100vh;
         box-sizing: border-box;  
-        color: #ffffff;
+        color: ${({theme}) => theme.colors.fontColor};
         background-image: url("${background}");
         background-size: contain;
         background-position: center;
