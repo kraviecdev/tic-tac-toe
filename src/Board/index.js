@@ -2,7 +2,7 @@ import Square from "../Square";
 import Result from "../Result";
 import { useEffect, useState } from "react";
 import { Patterns } from "./patterns";
-import { StyledBoard, StyledRow } from "./styled";
+import { StyledBoard} from "./styled";
 
 const Board = () => {
 
@@ -70,7 +70,6 @@ const Board = () => {
     return (
         <>
             <StyledBoard>
-                <StyledRow>
                     <Square
                         disabled={disable[0]}
                         onClick={() => chooseSquare(0)}
@@ -86,8 +85,6 @@ const Board = () => {
                         onClick={() => chooseSquare(2)}
                         value={boardStatus[2]}
                     />
-                </StyledRow>
-                <StyledRow>
                     <Square
                         disabled={disable[3]}
                         onClick={() => chooseSquare(3)}
@@ -103,8 +100,6 @@ const Board = () => {
                         onClick={() => chooseSquare(5)}
                         value={boardStatus[5]}
                     />
-                </StyledRow>
-                <StyledRow>
                     <Square
                         disabled={disable[6]}
                         onClick={() => chooseSquare(6)}
@@ -120,7 +115,6 @@ const Board = () => {
                         onClick={() => chooseSquare(8)}
                         value={boardStatus[8]}
                     />
-                </StyledRow>
             </StyledBoard>
             <Result
                 trigger={result}
