@@ -10,9 +10,8 @@ export const light = {
     colors: {
         background: "#F3F4F5",
         fontColor: "#0D0D0D",
-        buttonBackgorund: "#b3b3b3",
-        shadowOne: "#484848",
-        shadowTwo: "#ffffff",
+        optionBorder: "#484848",
+        buttonBackgorund: "#ffffff",
         popupBg: "#424040ec",
     },
 };
@@ -22,9 +21,8 @@ export const dark = {
     colors: {
         background: "#1A1A1A",
         fontColor: "#ffffff",
-        buttonBackgorund: "#606060",
-        shadowOne: "#525252",
-        shadowTwo: "#6e6e6e",
+        optionBorder: "#525252",
+        buttonBackgorund: "#6e6e6e",
         popupBg: "#424040ec",
     },
 };
