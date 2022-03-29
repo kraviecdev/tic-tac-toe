@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
         background-size: contain;
         background-position: center;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
     }
 

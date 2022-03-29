@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
-export const StyledHeader = styled.div`
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+export const StyledHeader = styled.header`
+    width: 100%;
+    background-color: ${({theme}) => theme.colors.background};
+    margin-bottom: 15px;
 `;
 
 export const StyledTitle = styled.h1`
