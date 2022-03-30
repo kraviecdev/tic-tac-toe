@@ -19,6 +19,7 @@ export const StyledResultInner = styled.section`
     padding: 15px;
     background-color: ${({ theme }) => theme.colors.background};
     border-radius: 4px;
+    border: 2px solid ${({ theme }) => theme.colors.optionBorder}
 `;
 
 export const StyledResultButton = styled.button`
