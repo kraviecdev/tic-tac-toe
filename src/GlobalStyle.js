@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import background from "./tic-tac-toe-bg.png";
+import background from "./tic-tac-toe-bg.svg";
 
 export const GlobalStyle = createGlobalStyle`
     #game {
