@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
     width: 100%;
-    background-color: ${({theme}) => theme.colors.background};
+    background-color: ${({theme}) => theme.colors.popupBg};
     margin-bottom: 15px;
 `;
 

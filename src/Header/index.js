@@ -1,12 +1,11 @@
 import { StyledHeader, StyledTitle } from "./styled"
 
-const Header = ({title}) => {
+const Header = ({ children }) => {
 
     return (
         <StyledHeader>
-            <StyledTitle>
-                {title}
-            </StyledTitle>
+            <StyledTitle>{"Tic Tac Toe"}</StyledTitle>
+            {children}
         </StyledHeader>
     );
 }
