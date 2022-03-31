@@ -2,5 +2,11 @@
   "short_name": "X/O Game",
   "name": "Tic Tac Toe Game",
   "start_url": ".",
+  "icons": [
+    {
+      "src": "ttt_icon.svg",
+      "type": "image/svg"
+    }
+  ],
   "display": "standalone"
 }
