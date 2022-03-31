@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import { ReactComponent as ThemeSwitch } from "./theme_icon.svg";
 
 export const Wrapper = styled.div`
+    margin-right: 5px;
     display: flex;
     justify-content: flex-end;
     align-content: center;
@@ -47,14 +48,14 @@ export const IconBody = styled.span`
   height: 20px;
   border-radius: 50%;
   transition: transform .3s, background .3s;
-  background: currentcolor;
+  background: ${({ theme }) => theme.colors.fontColor};
   
-  /* ${({ active }) => active && css`
+  ${({ active }) => active && css`
     transform: translateX(20px);
-  `} */
+  `}
 `;
 
 export const Icon = styled(ThemeSwitch)`
-  color: ${({ theme }) => theme.colors.fontColor};
+  /* color: ${({ theme }) => theme.colors.fontColor}; */
   transition: color .3s;
 `;
