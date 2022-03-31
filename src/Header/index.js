@@ -4,7 +4,6 @@ const Header = ({ children }) => {
 
     return (
         <StyledHeader>
-            <StyledTitle>{"Tic Tac Toe"}</StyledTitle>
             {children}
         </StyledHeader>
     );
