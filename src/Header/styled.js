@@ -7,4 +7,8 @@ export const StyledHeader = styled.header`
     position: absolute;
     top: 0;
     justify-content: flex-end;
+
+    @media(max-height: ${({ theme }) => theme.breakpoints.small}px) and (max-height: ${({ theme }) => theme.breakpoints.medium}px){
+        position: inherit;
+  }
 `;
