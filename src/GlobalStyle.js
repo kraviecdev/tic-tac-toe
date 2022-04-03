@@ -5,11 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     #game {
         background: ${({theme}) => theme.colors.background};
         height: 100vh;
-        max-width: 100%;
         box-sizing: border-box;  
         color: ${({theme}) => theme.colors.fontColor};
         background-image: url("${background}");
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         display: flex;
         flex-direction: column;
