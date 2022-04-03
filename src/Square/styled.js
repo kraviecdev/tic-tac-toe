@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledSquare = styled.button`
     cursor: pointer;
-    width: 100%;
+    padding: 0px;
     font-size: 75px;
     background: ${({theme}) => theme.colors.buttonBackgorund};
     border: 2px solid ${({theme}) => theme.colors.optionBorder};
