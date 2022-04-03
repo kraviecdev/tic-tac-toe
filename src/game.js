@@ -1,29 +1,20 @@
 import Board from './Board';
 import Header from './Header';
 
-import { useState } from 'react';
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from './GlobalStyle';
 import { dark, light } from './theme';
 import { ThemeSwitch } from './ThemeSwitch';
+import { useTheme } from "./ThemeSwitch/useTheme";
 
 
 function Game() {
-    const [theme, setTheme] = useState('light')
 
-    const toggleTheme = () => {
-        if (theme === 'light') {
-            setTheme('dark')
-        } else {
-            setTheme('light')
-        }
-    };
-
-    const isDarkTheme = () => {
-        if (theme === 'dark') {
-            return true;
-        } return false;
-    };
+    const {
+        theme,
+        toggleTheme,
+        isDarkTheme
+    } = useTheme();
 
     return (
         <ThemeProvider theme={theme === 'light' ? light : dark} >
