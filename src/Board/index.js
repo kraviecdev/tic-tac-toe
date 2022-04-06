@@ -2,7 +2,7 @@ import Square from "../Square";
 import Result from "../Result";
 import { useEffect, useState } from "react";
 import { winningPatterns } from "./patterns";
-import { StyledBoard} from "./styled";
+import { StyledBoard } from "./styled";
 
 const Board = () => {
 
@@ -36,8 +36,8 @@ const Board = () => {
 
     useEffect(() => {
         for (const winningPattern of winningPatterns) {
-                setResult(winningPattern);
-            }
+            setResult(winningPattern);
+        }
     });
 
     useEffect(() => {
@@ -62,51 +62,51 @@ const Board = () => {
     return (
         <>
             <StyledBoard>
-                    <Square
-                        disabled={disable[0]}
-                        onClick={() => chooseSquare(0)}
-                        value={boardStatus[0]}
-                    />
-                    <Square
-                        disabled={disable[1]}
-                        onClick={() => chooseSquare(1)}
-                        value={boardStatus[1]}
-                    />
-                    <Square
-                        disabled={disable[2]}
-                        onClick={() => chooseSquare(2)}
-                        value={boardStatus[2]}
-                    />
-                    <Square
-                        disabled={disable[3]}
-                        onClick={() => chooseSquare(3)}
-                        value={boardStatus[3]}
-                    />
-                    <Square
-                        disabled={disable[4]}
-                        onClick={() => chooseSquare(4)}
-                        value={boardStatus[4]}
-                    />
-                    <Square
-                        disabled={disable[5]}
-                        onClick={() => chooseSquare(5)}
-                        value={boardStatus[5]}
-                    />
-                    <Square
-                        disabled={disable[6]}
-                        onClick={() => chooseSquare(6)}
-                        value={boardStatus[6]}
-                    />
-                    <Square
-                        disabled={disable[7]}
-                        onClick={() => chooseSquare(7)}
-                        value={boardStatus[7]}
-                    />
-                    <Square
-                        disabled={disable[8]}
-                        onClick={() => chooseSquare(8)}
-                        value={boardStatus[8]}
-                    />
+                <Square
+                    disabled={disable[0]}
+                    onClick={() => chooseSquare(0)}
+                    value={boardStatus[0]}
+                />
+                <Square
+                    disabled={disable[1]}
+                    onClick={() => chooseSquare(1)}
+                    value={boardStatus[1]}
+                />
+                <Square
+                    disabled={disable[2]}
+                    onClick={() => chooseSquare(2)}
+                    value={boardStatus[2]}
+                />
+                <Square
+                    disabled={disable[3]}
+                    onClick={() => chooseSquare(3)}
+                    value={boardStatus[3]}
+                />
+                <Square
+                    disabled={disable[4]}
+                    onClick={() => chooseSquare(4)}
+                    value={boardStatus[4]}
+                />
+                <Square
+                    disabled={disable[5]}
+                    onClick={() => chooseSquare(5)}
+                    value={boardStatus[5]}
+                />
+                <Square
+                    disabled={disable[6]}
+                    onClick={() => chooseSquare(6)}
+                    value={boardStatus[6]}
+                />
+                <Square
+                    disabled={disable[7]}
+                    onClick={() => chooseSquare(7)}
+                    value={boardStatus[7]}
+                />
+                <Square
+                    disabled={disable[8]}
+                    onClick={() => chooseSquare(8)}
+                    value={boardStatus[8]}
+                />
             </StyledBoard>
             <Result
                 trigger={result}

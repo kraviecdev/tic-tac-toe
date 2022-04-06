@@ -28,7 +28,6 @@ export const Info = styled.p`
   @media(min-width: ${({ theme }) => theme.breakpoints.small}px) {
     display: block;
   }
-
 `;
 
 export const SwitchBody = styled.span`
@@ -38,7 +37,6 @@ export const SwitchBody = styled.span`
   background: ${({ theme }) => theme.colors.background};
   border: 1px solid;
   transition: background .3s;
-
 `;
 
 export const IconBody = styled.span`

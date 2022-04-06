@@ -4,8 +4,8 @@ export const StyledSquare = styled.button`
     cursor: pointer;
     padding: 0px;
     font-size: 75px;
-    background: ${({theme}) => theme.colors.buttonBackgorund};
-    border: 2px solid ${({theme}) => theme.colors.optionBorder};
+    background: ${({ theme }) => theme.colors.buttonBackgorund};
+    border: 2px solid ${({ theme }) => theme.colors.optionBorder};
     transition: 1s;
 
     &:focus, :hover{
@@ -14,7 +14,7 @@ export const StyledSquare = styled.button`
     }
 
     &:disabled{
-        color: ${({theme}) => theme.colors.fontColor};
+        color: ${({ theme }) => theme.colors.fontColor};
         filter: brightness(85%)
     }
 

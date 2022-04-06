@@ -1,6 +1,5 @@
 import { Wrapper, Button, Info, SwitchBody, IconBody, Icon } from "./styled";
 
-
 export const ThemeSwitch = ({ onClick, status, active }) => {
 
   return (

@@ -7,7 +7,6 @@ import { dark, light } from './theme';
 import { ThemeSwitch } from './ThemeSwitch';
 import { useTheme } from "./ThemeSwitch/useTheme";
 
-
 function Game() {
 
     const {
@@ -21,9 +20,9 @@ function Game() {
             <GlobalStyle />
             <Header children={
                 <ThemeSwitch
-                    onClick={() => toggleTheme()}
+                    onClick={toggleTheme}
                     status={theme === 'light' ? "on" : "off"}
-                    active={isDarkTheme()}
+                    active={isDarkTheme}
                 />
             } />
             <Board />

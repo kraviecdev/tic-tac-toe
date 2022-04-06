@@ -9,7 +9,7 @@ export const StyledBoard = styled.main`
     width: 100%;
     height: 100%;
     padding: 5px;
-    background: ${({theme}) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.background};
     border-radius: 15px;
 
     @media(min-width: ${({ theme }) => theme.breakpoints.small}px) and (min-height: ${({ theme }) => theme.breakpoints.small}px) {

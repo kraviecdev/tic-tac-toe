@@ -1,11 +1,9 @@
-import { StyledHeader, StyledTitle } from "./styled"
+import { StyledHeader } from "./styled"
 
 const Header = ({ children }) => {
 
     return (
-        <StyledHeader>
-            {children}
-        </StyledHeader>
+        <StyledHeader children={children} />
     );
 }
 
