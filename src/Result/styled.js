@@ -6,7 +6,7 @@ export const StyledResult = styled.aside`
     left: 0;
     width: 100%;
     height: 100vh;
-    background: ${({ theme }) => theme.colors.popupBg};
+    background: ${({ theme }) => theme.colors.popupBackground};
     display: flex;
     justify-content: center;
     align-items: center;

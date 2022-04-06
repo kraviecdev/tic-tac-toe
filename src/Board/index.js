@@ -1,23 +1,23 @@
 import Square from "../Square";
 import Result from "../Result";
 import { useEffect, useState } from "react";
-import { Patterns } from "./patterns";
+import { winningPatterns } from "./patterns";
 import { StyledBoard} from "./styled";
 
 const Board = () => {
 
     const [boardStatus, setBoardStatus] = useState(Array(9).fill(null));
     const [disable, setDisable] = useState(Array(9).fill(false));
-    const [player, setPlayer] = useState("X");
+    const [currentPlayer, setCurrentPlayer] = useState("X");
     const [result, setResult] = useState("");
     const [draw, setDraw] = useState("");
 
-    const chooseSquare = (i) => {
+    const chooseSquare = (selectedBoardIndex) => {
 
         setBoardStatus(
             boardStatus.map((value, id) => {
-                if (id === i && value === null) {
-                    return player;
+                if (id === selectedBoardIndex && value === null) {
+                    return currentPlayer;
                 }
                 return value;
             })
@@ -25,28 +25,20 @@ const Board = () => {
 
         setDisable(
             disable.map((disabled, id) => {
-                if (id === i && disabled === false) {
+                if (id === selectedBoardIndex && disabled === false) {
                     return true;
                 } return disabled;
             })
         );
 
-        if (player === "X") {
-            setPlayer("O")
-        } else {
-            setPlayer("X")
-        };
+        currentPlayer === "X" ? setCurrentPlayer("O") : setCurrentPlayer("X");
     };
 
-    useEffect((id) => {
-        for (id = 0; id < Patterns.length; id++) {
-            const [a, b, c] = Patterns[id];
-            if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
-                setResult(boardStatus[a]);
+    useEffect(() => {
+        for (const winningPattern of winningPatterns) {
+                setResult(winningPattern);
             }
-        }
-        return null;
-    }, [boardStatus]);
+    });
 
     useEffect(() => {
         const isDraw = (disable) => {
@@ -61,7 +53,7 @@ const Board = () => {
     const playAgain = () => {
         setBoardStatus(Array(9).fill(null));
         setDisable(Array(9).fill(false));
-        setPlayer("X")
+        setCurrentPlayer("X")
         setResult("")
         setDraw("")
     };
@@ -118,14 +110,14 @@ const Board = () => {
             </StyledBoard>
             <Result
                 trigger={result}
-                onClick={() => playAgain()}
+                onClick={playAgain}
                 title={"The winner: "}
             >
                 {result}
             </Result>
             <Result
                 trigger={draw}
-                onClick={() => playAgain()}
+                onClick={playAgain}
                 title={"It is a "}
             >
                 {draw}

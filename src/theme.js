@@ -1,8 +1,8 @@
 const breakpoints = {
-    small: "481",
-    medium: "768",
-    large: "870",
-    extraLarge: "1024",
+    small: 481,
+    medium: 768,
+    large: 870,
+    extraLarge: 1024,
   };
 
 export const light = {
@@ -12,7 +12,7 @@ export const light = {
         fontColor: "#0D0D0D",
         optionBorder: "#484848",
         buttonBackgorund: "#ffffff",
-        popupBg: "#F3F4F5ec",
+        popupBackground: "#F3F4F5ec",
     },
 };
 
@@ -23,6 +23,6 @@ export const dark = {
         fontColor: "#ffffff",
         optionBorder: "#525252",
         buttonBackgorund: "#6e6e6e",
-        popupBg: "#36383Cec",
+        popupBackground: "#36383Cec",
     },
 };
