@@ -34,11 +34,15 @@ const Board = () => {
         currentPlayer === "X" ? setCurrentPlayer("O") : setCurrentPlayer("X");
     };
 
-    useEffect(() => {
-        for (const winningPattern of winningPatterns) {
-            setResult(winningPattern);
+    useEffect((id) => {
+        for (id = 0; id < winningPatterns.length; id++) {
+            const [a, b, c] = winningPatterns[id];
+            if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
+                setResult(boardStatus[a]);
+            }
         }
-    });
+        return null;
+    }, [boardStatus]);
 
     useEffect(() => {
         const isDraw = (disable) => {

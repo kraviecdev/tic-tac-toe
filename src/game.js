@@ -22,7 +22,7 @@ function Game() {
                 <ThemeSwitch
                     onClick={toggleTheme}
                     status={theme === 'light' ? "on" : "off"}
-                    active={isDarkTheme}
+                    active={isDarkTheme()}
                 />
             } />
             <Board />
