@@ -6,7 +6,7 @@ const breakpoints = {
   };
 
 export const light = {
-    breakpoints: breakpoints,
+    breakpoints,
     colors: {
         background: "#F3F4F5",
         fontColor: "#0D0D0D",
@@ -17,7 +17,7 @@ export const light = {
 };
 
 export const dark = {
-    breakpoints: breakpoints,
+    breakpoints,
     colors: {
         background: "#36383C",
         fontColor: "#ffffff",
