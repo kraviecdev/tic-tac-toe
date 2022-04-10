@@ -18,13 +18,13 @@ function Game() {
     return (
         <ThemeProvider theme={theme === 'light' ? light : dark} >
             <GlobalStyle />
-            <Header children={
+            <Header>
                 <ThemeSwitch
                     onClick={toggleTheme}
                     status={theme === 'light' ? "on" : "off"}
                     active={isDarkTheme()}
                 />
-            } />
+            </Header>
             <Board />
         </ThemeProvider>
     );
