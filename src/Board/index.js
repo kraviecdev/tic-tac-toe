@@ -15,18 +15,17 @@ const Board = () => {
 
     const chooseSquare = (selectedBoardIndex) => {
 
+        setBoardStatus(
+            boardStatus.map((value, index) => {
+                if (boardStatus[index] === null) {
+                    return currentPlayer;
+                } return value;
+            })
+        );
+
         if (boardStatus[selectedBoardIndex]) {
             return;
         };
-
-        setBoardStatus(
-            boardStatus.map((value, id) => {
-                if (id === selectedBoardIndex && value === null) {
-                    return currentPlayer;
-                }
-                return value;
-            })
-        );
 
         currentPlayer === "X" ? setCurrentPlayer("O") : setCurrentPlayer("X");
     };
@@ -40,8 +39,6 @@ const Board = () => {
         }
     }, [boardStatus]);
 
-
-
     const playAgain = () => {
         setBoardStatus(Array(9).fill(null));
         setCurrentPlayer("X")
@@ -49,46 +46,16 @@ const Board = () => {
         setDraw(initialState)
     };
 
-
     return (
         <>
-            <StyledBoard>
-                <Square
-                    onClick={() => chooseSquare(0)}
-                    value={boardStatus[0]}
-                />
-                <Square
-                    onClick={() => chooseSquare(1)}
-                    value={boardStatus[1]}
-                />
-                <Square
-                    onClick={() => chooseSquare(2)}
-                    value={boardStatus[2]}
-                />
-                <Square
-                    onClick={() => chooseSquare(3)}
-                    value={boardStatus[3]}
-                />
-                <Square
-                    onClick={() => chooseSquare(4)}
-                    value={boardStatus[4]}
-                />
-                <Square
-                    onClick={() => chooseSquare(5)}
-                    value={boardStatus[5]}
-                />
-                <Square
-                    onClick={() => chooseSquare(6)}
-                    value={boardStatus[6]}
-                />
-                <Square
-                    onClick={() => chooseSquare(7)}
-                    value={boardStatus[7]}
-                />
-                <Square
-                    onClick={() => chooseSquare(8)}
-                    value={boardStatus[8]}
-                />
+            <StyledBoard >
+                {boardStatus.map((selectedBoardIndex, index, value) => (
+                    <Square
+                        key={index}
+                        onClick={() => chooseSquare(selectedBoardIndex)}
+                        value={value[index]}
+                    />
+                ))}
             </StyledBoard>
             <Result
                 trigger={result}
