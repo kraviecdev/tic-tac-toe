@@ -17,7 +17,7 @@ const Board = () => {
 
         setBoardStatus(
             boardStatus.map((value, index) => {
-                if (boardStatus[index] === null) {
+                if (index === selectedBoardIndex && value === null) {
                     return currentPlayer;
                 } return value;
             })
@@ -36,7 +36,15 @@ const Board = () => {
             if (boardStatus[a] && boardStatus[a] === boardStatus[b] && boardStatus[a] === boardStatus[c]) {
                 setResult(boardStatus[a]);
             }
-        }
+        };
+
+        const isFilled = (selectedBoardIndex) => {
+            return selectedBoardIndex !== null;
+        };
+    
+        if (boardStatus.every(isFilled)){
+            setDraw("draw");
+        };
     }, [boardStatus]);
 
     const playAgain = () => {
@@ -46,14 +54,16 @@ const Board = () => {
         setDraw(initialState)
     };
 
+
+
     return (
         <>
             <StyledBoard >
-                {boardStatus.map((selectedBoardIndex, index, value) => (
+                {boardStatus.map((selectedBoardIndex, index) => (
                     <Square
                         key={index}
-                        onClick={() => chooseSquare(selectedBoardIndex)}
-                        value={value[index]}
+                        onClick={() => chooseSquare(index)}
+                        value={selectedBoardIndex}
                     />
                 ))}
             </StyledBoard>
