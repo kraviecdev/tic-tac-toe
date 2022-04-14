@@ -3,10 +3,7 @@ import background from "./ticTacToeBackground.svg";
 
 export const GlobalStyle = createGlobalStyle`
     #game {
-        background: ${({theme}) => theme.colors.background};
-        height: 100vh;
-        box-sizing: border-box;  
-        color: ${({theme}) => theme.colors.fontColor};
+        height: 100vh; 
         background-image: url("${background}");
         background-size: cover;
         background-position: center;
@@ -21,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        background: ${({ theme }) => theme.colors.background};
+        color: ${({ theme }) => theme.colors.fontColor};
+        box-sizing: border-box; 
         margin: 0;
         font-family: 'Lato', sans-serif;
         -webkit-font-smoothing: antialiased;

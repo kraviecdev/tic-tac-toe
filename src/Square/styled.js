@@ -6,7 +6,8 @@ export const StyledSquare = styled.button`
     font-size: 75px;
     background: ${({ theme }) => theme.colors.buttonBackgorund};
     border: 2px solid ${({ theme }) => theme.colors.optionBorder};
-    transition: 1s;
+    color: ${({ theme }) => theme.colors.fontColor};
+    transition: 500ms;
 
     &:focus, :hover{
         outline: none;
