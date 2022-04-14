@@ -1,11 +1,10 @@
 import { StyledSquare } from "./styled";
 
-const Square = ({ value, onClick, disabled }) => {
+const Square = ({ value, onClick }) => {
 
     return (
         <StyledSquare
             onClick={onClick}
-            disabled={disabled}
         >
             {value}
         </StyledSquare>

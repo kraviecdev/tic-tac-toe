@@ -13,11 +13,6 @@ export const StyledSquare = styled.button`
         filter: brightness(60%);
     }
 
-    &:disabled{
-        color: ${({ theme }) => theme.colors.fontColor};
-        filter: brightness(85%)
-    }
-
     @media(min-width: ${({ theme }) => theme.breakpoints.small}px,) {
         font-size: 85px;
     }
