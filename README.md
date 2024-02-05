@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![gif](tic-tac-toe.gif)
 
-Here you can find --> [**Demo**](https://patrick36212.github.io/tic-tac-toe/) 
+Here you can find --> [**Demo**](https://kraviecdev.github.io/tic-tac-toe/) 
 
 ## Technologies used in project
 
